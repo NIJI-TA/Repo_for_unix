@@ -1,0 +1,9 @@
+user1:1:2:3:4:/home/user1
+user2:ksesha:2:3:4:/home/user2
+user8:1:2:3:4:/home/user3
+ksesha:ksesha:2:3:4:/home/ks/some/way/to/some/end
+user4:1:2:3:4:/home/user4
+ksesha5:1:2:ksesha:4:/home/ksesha
+niji:1:2:3:4:/home/some/way
+user7:1:2:3:4:/home/user1
+user3:1:2:3:4:/home/user8
