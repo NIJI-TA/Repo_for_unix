@@ -1,13 +1,13 @@
 #!/bin/bash
 
-
+#Too many args
 if [[  $# -gt 3 ]]; then
 	echo "Error" >&2
 	echo "Try 'userhome --help' for more information" >&2
-	exit 3  #Too many args
+	exit 3
 fi
 
-
+#Solution for three args
 if [[ $# = 3 ]]; then
 	if [[ $1 = '-f' ]]; then
 		if find "$2" >/dev/null 2>&1; then
@@ -26,7 +26,7 @@ if [[ $# = 3 ]]; then
 	fi
 fi
 
-
+#Solution for two args
 if [[ $# = 2 ]]; then
 	if [[ $1 = '-f' ]]; then
 		if find "$2" >/dev/null 2>&1; then
@@ -45,7 +45,7 @@ if [[ $# = 2 ]]; then
 	fi
 fi
 
-
+#Solution for one arg
 if [[ $# = 1 ]]; then
 	login="$1"
 	if [[ ${login:0:1} != '-' ]]; then
@@ -68,7 +68,7 @@ if [[ $# = 1 ]]; then
 	fi
 fi
 
-
+#Solution for no args
 if [[ $# = 0 ]]; then
 	echo `cut -d ':' -f 1,6 /etc/passwd | grep -w "$USER"":" | cut -d ':' -f 2`
 	exit 0
